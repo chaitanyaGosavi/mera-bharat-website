@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Oswald&family=Playfair+Display:wght@500&display=swap');
+:root{
+    --primary: #f3f5ff;
+    --card: #9db9df;;
+    --content: #3A5985;}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    max-width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--primary);
+}
+body p, body h1, body h2, body h3{
+    color: var(--content);
+}
+body p{
+    font-family: 'Oswald', sans-serif;
+}
+body button, body a, body label, body input{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+body h1, body h2, body h3{
+    font-family: 'Playfair Display', serif;
+}
+section h1, section h2{
+    text-align: center;
+}
+nav{
+    background-color: var(--primary);
+}
+.hamburger{
+    border: none;
+}
+
+.nav{
+    width: 60vw;
+display: flex;
+justify-content: space-evenly;
+}
+.nav-menu a{
+    padding: 7px;
+    font-size: 18px;
+    font-weight: 550;
+    color: var(--content);
+    transition: 0.5s all ease-in-out;
+}
+.nav-menu a:hover{
+    border-radius: 7px;
+    background-color: var(--content);   
+    opacity: 50%; 
+    color: var(--primary);
+}
+.nav-menu .logo{
+    font-size: 25px;
+    color: #032864;
+    font-weight: 600;
+}
+section{
+    width: 80vw;
+    height: auto; 
+    margin: auto auto;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+}
+.intro-section{
+    height: 80vh;
+    margin-top: 1vh;
+    background: linear-gradient(#00000075, #00000075, url("bg.jpg")) center center no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: bgChange 30s infinite;
+    transition: all, 0.5s, ease;
+}
+@keyframes bgChange{
+    0%{
+        background-image:url("bg.jpg");
+
+    }
+    25%{
+        background-image:url("mumbai.jpg");
+
+    }
+    50%{
+        background-image:url("delhi.jpg");
+
+    }
+    75%{
+        background-image:url("agra.jpg");
+
+    }
+    100%{
+        background-image:url("bg.jpg");
+
+    }
+    
+}
+
+.change_span:after{
+    content: ' ';
+    animation: changetext 10s infinite linear;
+    transition: all 0.2s ease;
+
+} 
+@keyframes changetext{
+0%{
+    content: 'Delhi';
+}
+10%{
+    content: 'Mumbai'; 
+}
+20%{
+    content: 'Chennai'; 
+}30%{
+    content: 'Hyderabad'; 
+}
+30%{
+    content: 'Kolkata'; 
+}
+40%{
+    content: 'Lonavalaa'; 
+}
+50%{
+    content: 'Assam'; 
+}
+60%{
+    content: 'Kashmir'; 
+}
+70%{
+    content: 'Meghalaya';
+}
+80%{
+    content: 'Goa'; 
+}
+80%{
+    content: 'Rajsthan'; 
+}
+100%{
+    content: 'India'; 
+}
+}
+.intro-section p, .intro-section h1, .intro-section h3{
+    color: var(--primary);
+    text-shadow: 1px 2px #000000;
+    font-weight: 600;
+}
+.intro-section h1{
+    font-size: 60px;
+}
+.intro-section h3{
+    font-size: 30px;
+}
+.intro-section p{
+    font-size: 30px;
+}
+.intro-section a{
+    background-color: var(--primary);
+    color: var(--content);
+    font-weight: 550;
+    transition: 0.5s all ease-in-out;
+}
+.intro-section #learn_more{
+    background-color: var(--content);
+    color: var(--primary);
+}
+.intro-section a:hover{
+    background-color: var(--content);
+    color: var(--primary);
+}
+.intro-section #learn_more:hover{
+    border: 2px solid var(--content);
+    background-color: var(--primary);
+    color: var(--content);
+}
+
+.about-section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-section{
+    width: 45vw;
+    font-size: 22px;
+}
+.content-section h2{
+    text-align: center;
+}
+.about-img{
+    width: 30vw;
+}
+.about-img img{
+    width: 100%;
+}
+.social{
+float: right;
+}
+.social a{
+    padding: 7px;
+    color: var(--content);
+font-size: 30px;
+transition: 0.2s ease;
+}
+#fb:hover{
+    color: rgb(47, 129, 197);
+    }
+#twitter:hover{
+        color: rgb(85, 207, 255);
+    }
+#ig:hover{
+        color: rgb(202, 122, 248);
+    }
+#wp:hover{
+    color: rgb(111, 228, 65);
+    }
+    .packages-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+   .card{
+        width: 28rem;
+        padding: 5px;
+        font-weight: 550;
+        background-color: var(--card);
+        box-shadow: 0 4px 8px 0;
+        margin-bottom: 2vh;
+        transition: 0.5s all ease-in-out;
+        perspective: 1000px; 
+
+    }
+    .packages-section .card:hover{
+        cursor: pointer;
+        box-shadow: 0 8px 12px 0;
+
+    }
+   .card .flip-card-back a{
+       color: var(--primary);
+       background-color: var(--content);
+       font-weight: 550;
+   }
+   .card .flip-card-back a:hover{
+       color: var(--content);
+       background-color: var(--primary);
+   }
+   .card img{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+   }
+
+
+    .flip-card-inner {
+        position: relative;
+        text-align: center;
+        height: 20vh;
+        transition: transform 0.8s ease-in-out;
+        transform-style: preserve-3d;
+    }
+    .card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .enquiry-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .vector-img-section{
+    width: 40%;
+  }
+  .vector-img-section img{
+      width: 100%;
+  }
+
+  .enquiry-form{
+      width: 55%;
+      height: auto;
+      background: none;
+      padding: 7px;
+    }
+    .enquiry-form form input, .enquiry-form form select{
+        width: 30vw;
+        outline: none;
+        background-color: var(--primary);
+        border: none;
+        border-bottom: 2px solid var(--content);
+        box-shadow: none;
+  }
+  .enquiry-form form input:focus, .enquiry-form form select:focus{
+    background-color: var(--primary);
+    outline: none;
+  }
+ 
+  .enquiry-form form label{
+      color: var(--content);
+      font-weight: 550;
+  }
+  .enquiry-container{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+ .enquiry-form{
+      width: 35vw;
+  }
+ .submit-btn{
+      display: flex;
+      justify-content: flex-start;
+  }
+.submit-btn button{
+    background-color: var(--primary);
+    color: var(--content);
+    border: 2px solid var(--content);
+    font-weight: 550;
+    transition: 0.2s all ease-in-out;
+  }
+.submit-btn button:hover{
+  background-color: var(--content);
+  color: var(--primary);
+}
+
+  @media(max-width: 1240px) {
+    .enquiry-form{
+        width: 60%;}
+        .enquiry-form form input, .enquiry-form form select{
+            width: 100%;
+        }
+        .social{
+                float: left;
+        }
+        .about-section{
+            flex-direction: column;
+        }
+        .content-section{
+            width: 80vw;
+        }
+        .about-img{
+            width: 50vw;
+        }
+        .card{
+            width: 25rem;
+        }
+  }
+  @media(max-width: 1024px) {
+    .intro-section{
+        width: 100vw;
+    }
+    .intro-section a, .nav-menu a{
+        font-size: 16px;
+    }
+    .card{
+        width: 22rem;
+    }
+    .content-section{
+        font-size: 18px;}
+    .social a{
+        font-size: 22px;
+    }
+    .intro-section h1{
+        font-size: 40px;
+    }
+    .intro-section p{
+        font-size: 25px;
+    }
+  }
+
+  @media(max-width: 990px) {
+  .nav{
+    flex-direction: column;
+  }
+}
+@media(max-width: 768px) {
+.packages-section{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-img{
+    width: 60vw;
+}
+.card{
+    height: 30vh;
+}
+.card img{
+    height: 28vh;
+}
+.enquiry-container{
+flex-direction: column;
+justify-content: center;
+}
+.vector-img-section{
+    width: 50vw;
+}
+.enquiry-form{
+    width: 80vw;
+}
+}
+@media(max-width: 768px) {
+    .card{
+        width: 18rem;
+    }
+    .packages-section{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .content-section{
+        font-size: 14px;
+    }
+    .intro-section h1{
+        font-size: 22px;
+    }
+    .intro-section h2{
+        font-size: 18px;
+    }
+    .intro-section h3{
+        font-size: 16px;
+    }
+    .nav-menu .logo{
+    font-size: 18px;
+    }
+    .intro-section a, .nav-menu a, .packages-section a{
+        font-size: 14px;
+    }
+}
