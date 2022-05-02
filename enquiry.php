@@ -12,7 +12,7 @@ $rs = mysqli_query($con, $sql_add);
 
 if($rs)
 {
-	header("Refresh:0; url = http://localhost/meraBharat/home.html");
+	header("Refresh:0; url = http://localhost/meraBharat/index.html");
 }
 else {
 	echo("error". mysqli_error($con));
